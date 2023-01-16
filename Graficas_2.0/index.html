@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="./Asset/Libs/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./Asset/Libs/Bootstrap/css/bootstrap-utilities.css">
+    <script src="./Asset/Libs/Bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./Asset/Libs/Bootstrap/js/bootstrap.js"></script>
+    <!-- JQuery -->
+    <script src="./Asset/Libs/JQuery/jquery-3.6.1.js"></script>
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- JS -->
+    <script src="./Asset/Js/index.js"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="./Asset/Css/index.css">
+
+
+    <title>Graficos</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-4  d-md-block bg-danger text-white sidebar overflow-auto">
+                <div class="position-sticky pt-3 text-center">
+                    <h2 class="text-center">Vodafone</h2>
+                    <ul class="nav flex-column">
+                        <li class="nav-item" id="inicio">
+                        <div class="collapse mx-3 show" id="inicio-filtros">
+                            <h4 class="">Infome de ventas</h4>
+                            <form action="#" method="POST" name="form_filtro" id="form_filtro">
+                                <li class="nav-item">
+                                    <label for="filtro_concepto">Concepto</label>
+                                    <select class="form-select form-select-sm" aria-label=".form-select-sm"
+                                        name="filtro_concepto">
+                                        <option selected value="">Todos</option>
+                                        <option value="Call_Back">Call Back</option>
+                                        <option value="Back_Office">Back Office</option>
+                                        <option value="Departamento_Ventas">Departamento Ventas</option>
+                                        <option value="Office">Office</option>
+                                    </select>
+                                </li>
+                                <li class="nav-item">
+                                    <label for="filtro_desde">Desde</label>
+                                    <input type="date" class="form-control form-control-sm"
+                                        name="filtro_desde" id="filtro_desde">
+                                </li>
+                                <li class="nav-item">
+                                    <label for="filtro_hasta">Hasta</label>
+                                    <input type="date" class="form-control form-control-sm"
+                                        name="filtro_hasta" id="filtro_hasta" >
+                                </li>
+                                <li class="nav-item">
+                                    <label for="filtro_tipo">Tipo de Grafica</label>
+                                    <select class="form-select form-select-sm" aria-label=".form-select-sm"
+                                        name="filtro_tipo">
+                                        <option selected value="Linea">Linea</option>
+                                        <option value="Barra">Barras</option>
+                                    </select>
+                                </li>
+
+                                <li class="nav-item">
+                                    <label for="reset">&nbsp;</label>
+                                    <button type="reset" class="btn btn-sm btn-secondary form-control"
+                                        name="reset">Reiniciar formulario</button>
+                                </li>
+                                <li class="nav-item">
+                                    <label for="submit">&nbsp;</label>
+                                    <button type="submit" class="btn btn-sm btn-primary form-control mb-3"
+                                        name="submit" id="submit-filtrar">Mostrar</button>
+                                </li>
+                            </form>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+            <div id="div_grafica" class="col-8 text-center">
+                <h1 class="mt-3">Graficas</h1>
+                <canvas id="grafica"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
